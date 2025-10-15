@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catatan Keuangan & Target Tabungan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="mobile-container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Halo, Selamat Datang!!!!</h1>
+            <p>Atur keuanganmu dengan mudah dan cepat</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Ringkasan Saldo -->
+            <section class="card balance-card">
+                <h2>Total Saldo Saat Ini</h2>
+                <p id="balance-amount">Rp 0</p>
+            </section>
+
+            <!-- Target Tabungan -->
+            <section class="card savings-target-card">
+                <h2>Target Tabungan</h2>
+                <div class="target-info">
+                    <span id="savings-progress-text">Tersimpan: Rp 0</span>
+                    <span id="savings-target-text">Target: Rp 0</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="savings-progress-bar"></div>
+                </div>
+                <button id="set-target-btn" class="btn btn-secondary">Atur Target</button>
+            </section>
+            
+            <!-- Tambah Transaksi -->
+            <section class="card add-transaction-card">
+                <h2>Tambah Transaksi Baru</h2>
+                <form id="transaction-form">
+                    <input type="text" id="description" placeholder="Deskripsi (misal: Gaji, Makan siang)" required>
+                    <input type="number" id="amount" placeholder="Jumlah (misal: 50000)" required>
+                    <div class="transaction-type">
+                        <label>
+                            <input type="radio" name="type" value="income" checked> Pemasukan
+                        </label>
+                        <label>
+                            <input type="radio" name="type" value="expense"> Pengeluaran
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Tambah</button>
+                </form>
+            </section>
+
+            <!-- Riwayat Transaksi -->
+            <section class="card transaction-history-card">
+                <h2>Riwayat Transaksi</h2>
+                <ul id="transaction-list">
+                    <!-- Transaksi akan muncul di sini -->
+                </ul>
+            </section>
+
+             <!-- Laporan Mingguan -->
+             <section class="card weekly-report-card">
+                <h2>Laporan Mingguan</h2>
+                <div class="report-details">
+                    <div>
+                        <p>Total Pemasukan</p>
+                        <span id="weekly-income">Rp 0</span>
+                    </div>
+                    <div>
+                        <p>Total Pengeluaran</p>
+                        <span id="weekly-expense">Rp 0</span>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Dibuat oleh Gemini</p>
+        </footer>
+
+    </div>
+
+    <!-- Modal untuk Atur Target -->
+    <div id="target-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Atur Target Tabungan</h2>
+            <form id="target-form">
+                <input type="number" id="target-amount" placeholder="Masukkan jumlah target" required>
+                <button type="submit" class="btn btn-primary">Simpan Target</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
