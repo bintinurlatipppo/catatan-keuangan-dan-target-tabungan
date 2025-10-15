@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let savingsTarget = JSON.parse(localStorage.getItem('savingsTarget')) || 0;
 
 
-    // --- FUNGSI ---
+    // -- FUNGSI --
 
     // Fungsi untuk memformat angka menjadi format Rupiah
     const formatToRupiah = (amount) => {
