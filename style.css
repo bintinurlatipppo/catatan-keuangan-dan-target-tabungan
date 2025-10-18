@@ -26,8 +26,9 @@ body {
     overflow: hidden;
 }
 
+/* Header */
 .header {
-    background: linear-gradient(135deg, #8B1B4A, #A5124F);
+    background: linear-gradient(135deg, #4F46E5, #6366F1);
     color: white;
     padding: 24px 20px;
     border-bottom-left-radius: 20px;
